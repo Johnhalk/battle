@@ -1,7 +1,10 @@
 <body>
 <h1>Player 1</h1>
-<h2><%= @player_1_name %> <%= @player_1_health %>HP </h2>
+<h2><%= @game.player_1.name %>: <%= @game.player_1.health %>HP </h2>
 <h1>Player 2</h1>
-<h2><%= @player_2_name%>: <%= @player_2_health %>HP </h2>
-<a href="/attack">Player 1 Attack</a>
+<h2><%= @game.player_2.name%>: <%= @game.player_2.health %>HP </h2>
+<a href="/attack"> Attack</a>
+
+<p><%= @game.active_player.name %>'s turn ! </p>
+
 </body>

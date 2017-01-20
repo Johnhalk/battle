@@ -2,17 +2,19 @@ class Player
 
 attr_accessor :name, :health
 
-  def initialize(name, health)
+HEALTH = 60
+
+  def initialize(name)
     @name = name
-    @health = 60
+    @health = HEALTH
+  end
+
+  def receive_damage
+    @health -=10
   end
 
   def call_name
     @name
-  end
-
-  def attack
-    @health -= 10
   end
 
 end
