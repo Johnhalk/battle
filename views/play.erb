@@ -3,8 +3,15 @@
 <h2><%= @game.player_1.name %>: <%= @game.player_1.health %>HP </h2>
 <h1>Player 2</h1>
 <h2><%= @game.player_2.name%>: <%= @game.player_2.health %>HP </h2>
+<% if !@game.game_won? %>
 <a href="/attack"> Attack</a>
+<% end %>
 
+<% if @game.game_won? %>
+<a href="/"> Reset</a>
+<% end %>
 <p><%= @game.active_player.name %>'s turn ! </p>
+
+<p> <%= @game.message %> </p>
 
 </body>

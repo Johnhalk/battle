@@ -9,7 +9,6 @@ feature 'switching turns' do
   scenario "After player 1 attacks player 2 becomes the active player" do
     sign_in_and_play
     click_link('Attack')
-    click_link('Back to battle')
     expect(page).to have_content('Mica\'s turn !')
   end
 end

@@ -16,6 +16,10 @@ describe Game do
   describe '#attack' do
     it 'reduces a players health by 10 points' do
       allow(player_2).to receive(:receive_damage)
+      allow(player_1).to receive(:name){ "John" }
+      allow(player_2).to receive(:name){ "Mica" }
+      allow(player_1).to receive(:health){ 60 }
+      allow(player_2).to receive(:health){ 60 }
       expect{game.attack}.not_to raise_error
     end
   end

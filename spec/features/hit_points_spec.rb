@@ -11,7 +11,6 @@ feature "Reduce hit points" do
   scenario "player 1 can attack and reduce hit points of player 2" do
     sign_in_and_play
     click_link('Attack')
-    click_link('Back to battle')
     expect(page).to have_content ('Mica: 50HP')
   end
 end
